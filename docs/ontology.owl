@@ -49,7 +49,6 @@
 
 
     <owl:ObjectProperty rdf:about="http://www.semanticweb.org/turism#hasAttraction">
-        <owl:inverseOf rdf:resource="http://www.semanticweb.org/turism#locatedInCity"/>
         <rdfs:domain rdf:resource="http://www.semanticweb.org/turism#City"/>
         <rdfs:range rdf:resource="http://www.semanticweb.org/turism#Attraction"/>
         <rdfs:comment>Inverse of locatedInCity for Attractions</rdfs:comment>
@@ -62,7 +61,6 @@
 
 
     <owl:ObjectProperty rdf:about="http://www.semanticweb.org/turism#hasEvent">
-        <owl:inverseOf rdf:resource="http://www.semanticweb.org/turism#locatedInCity"/>
         <rdfs:domain rdf:resource="http://www.semanticweb.org/turism#City"/>
         <rdfs:range rdf:resource="http://www.semanticweb.org/turism#Event"/>
         <rdfs:comment>Inverse of locatedInCity for events</rdfs:comment>
@@ -75,7 +73,6 @@
 
 
     <owl:ObjectProperty rdf:about="http://www.semanticweb.org/turism#hasHotel">
-        <owl:inverseOf rdf:resource="http://www.semanticweb.org/turism#locatedInCity"/>
         <rdfs:domain rdf:resource="http://www.semanticweb.org/turism#City"/>
         <rdfs:range rdf:resource="http://www.semanticweb.org/turism#Hotel"/>
         <rdfs:comment>Inverse of locatedInCity for hotels</rdfs:comment>
@@ -88,7 +85,6 @@
 
 
     <owl:ObjectProperty rdf:about="http://www.semanticweb.org/turism#hasRestaurants">
-        <owl:inverseOf rdf:resource="http://www.semanticweb.org/turism#locatedInCity"/>
         <rdfs:domain rdf:resource="http://www.semanticweb.org/turism#City"/>
         <rdfs:range rdf:resource="http://www.semanticweb.org/turism#Restaurant"/>
         <rdfs:comment>Inverse of locatedInCity for Restaurants</rdfs:comment>
@@ -101,7 +97,6 @@
 
 
     <owl:ObjectProperty rdf:about="http://www.semanticweb.org/turism#hasTransport">
-        <owl:inverseOf rdf:resource="http://www.semanticweb.org/turism#locatedInCity"/>
         <rdfs:domain rdf:resource="http://www.semanticweb.org/turism#City"/>
         <rdfs:range rdf:resource="http://www.semanticweb.org/turism#Transport"/>
         <rdfs:comment>Inverse of locatedInCity for Transport</rdfs:comment>
@@ -114,7 +109,6 @@
 
 
     <owl:ObjectProperty rdf:about="http://www.semanticweb.org/turism#hostsEvent">
-        <owl:inverseOf rdf:resource="http://www.semanticweb.org/turism#locatedInCity"/>
         <rdfs:domain rdf:resource="http://www.semanticweb.org/turism#City"/>
         <rdfs:range rdf:resource="http://www.semanticweb.org/turism#Event"/>
         <rdfs:label>host event</rdfs:label>
@@ -163,7 +157,14 @@
 
 
     <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/turism#hasAveragePrice">
-        <rdfs:domain rdf:resource="http://www.semanticweb.org/turism#Restaurant"/>
+        <rdfs:domain>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.semanticweb.org/turism#Restaurant"/>
+                    <rdf:Description rdf:about="http://www.semanticweb.org/turism#Transport"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:domain>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#decimal"/>
         <rdfs:comment>Average meal price</rdfs:comment>
         <rdfs:label>has average price</rdfs:label>
@@ -200,8 +201,14 @@
 
 
     <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/turism#hasID">
-        <rdfs:domain rdf:resource="http://www.semanticweb.org/turism#City"/>
-        <rdfs:domain rdf:resource="http://www.semanticweb.org/turism#Place"/>
+        <rdfs:domain>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.semanticweb.org/turism#City"/>
+                    <rdf:Description rdf:about="http://www.semanticweb.org/turism#Place"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:domain>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
         <rdfs:comment>Unique identifier</rdfs:comment>
         <rdfs:label>has ID</rdfs:label>
@@ -215,8 +222,8 @@
     <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/turism#hasPricePerNight">
         <rdfs:domain rdf:resource="http://www.semanticweb.org/turism#Hotel"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#decimal"/>
-        <rdfs:comment>Cost per night</rdfs:comment>
-        <rdfs:label>has price per night</rdfs:label>
+        <rdfs:comment xml:lang="en">The price charged by night</rdfs:comment>
+        <rdfs:label xml:lang="en">has price per night</rdfs:label>
     </owl:DatatypeProperty>
     
 
@@ -225,9 +232,15 @@
 
 
     <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/turism#hasRating">
-        <rdfs:domain rdf:resource="http://www.semanticweb.org/turism#Attraction"/>
-        <rdfs:domain rdf:resource="http://www.semanticweb.org/turism#Hotel"/>
-        <rdfs:domain rdf:resource="http://www.semanticweb.org/turism#Restaurant"/>
+        <rdfs:domain>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.semanticweb.org/turism#Attraction"/>
+                    <rdf:Description rdf:about="http://www.semanticweb.org/turism#Hotel"/>
+                    <rdf:Description rdf:about="http://www.semanticweb.org/turism#Restaurant"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:domain>
         <rdfs:range>
             <rdfs:Datatype>
                 <owl:onDatatype rdf:resource="http://www.w3.org/2001/XMLSchema#decimal"/>
@@ -262,8 +275,14 @@
 
 
     <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/turism#has_name">
-        <rdfs:domain rdf:resource="http://www.semanticweb.org/turism#City"/>
-        <rdfs:domain rdf:resource="http://www.semanticweb.org/turism#Place"/>
+        <rdfs:domain>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.semanticweb.org/turism#City"/>
+                    <rdf:Description rdf:about="http://www.semanticweb.org/turism#Place"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:domain>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
         <rdfs:comment>The name of the entity</rdfs:comment>
         <rdfs:label>has name</rdfs:label>
@@ -288,6 +307,7 @@
 
     <owl:Class rdf:about="http://www.semanticweb.org/turism#AndalusianRestaurant">
         <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/turism#Restaurant"/>
+        <rdfs:label xml:lang="en">Andalusian Restaurant</rdfs:label>
     </owl:Class>
     
 
@@ -308,6 +328,7 @@
 
     <owl:Class rdf:about="http://www.semanticweb.org/turism#Beach">
         <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/turism#Attraction"/>
+        <rdfs:label xml:lang="en">Beach</rdfs:label>
     </owl:Class>
     
 
@@ -317,6 +338,7 @@
 
     <owl:Class rdf:about="http://www.semanticweb.org/turism#BeachHotel">
         <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/turism#Hotel"/>
+        <rdfs:label xml:lang="en">Beach hotel</rdfs:label>
     </owl:Class>
     
 
@@ -326,6 +348,7 @@
 
     <owl:Class rdf:about="http://www.semanticweb.org/turism#Bus">
         <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/turism#Transport"/>
+        <rdfs:label xml:lang="en">Bus</rdfs:label>
     </owl:Class>
     
 
@@ -335,6 +358,7 @@
 
     <owl:Class rdf:about="http://www.semanticweb.org/turism#BusinessHotel">
         <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/turism#Hotel"/>
+        <rdfs:label xml:lang="en">Business Hotel</rdfs:label>
     </owl:Class>
     
 
@@ -356,9 +380,9 @@
                 <owl:someValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
             </owl:Restriction>
         </rdfs:subClassOf>
-        <rdfs:comment>An urban administrative division</rdfs:comment>
-        <rdfs:label>City</rdfs:label>
-        <rdfs:seeAlso>http://dbpedia.org/ontology/City</rdfs:seeAlso>
+        <rdfs:comment xml:lang="en">An urban administrative division</rdfs:comment>
+        <rdfs:label xml:lang="en">City</rdfs:label>
+        <rdfs:seeAlso xml:lang="en">http://dbpedia.org/ontology/City</rdfs:seeAlso>
     </owl:Class>
     
 
@@ -368,6 +392,7 @@
 
     <owl:Class rdf:about="http://www.semanticweb.org/turism#CulturalAttraction">
         <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/turism#Attraction"/>
+        <rdfs:label xml:lang="en">Cultural Attraction</rdfs:label>
     </owl:Class>
     
 
@@ -377,6 +402,7 @@
 
     <owl:Class rdf:about="http://www.semanticweb.org/turism#CulturalEvent">
         <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/turism#Event"/>
+        <rdfs:label xml:lang="en">Cultural Event</rdfs:label>
     </owl:Class>
     
 
@@ -405,6 +431,7 @@
 
     <owl:Class rdf:about="http://www.semanticweb.org/turism#GastronomicEvent">
         <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/turism#Event"/>
+        <rdfs:label xml:lang="en">Gastronomic Event</rdfs:label>
     </owl:Class>
     
 
@@ -414,6 +441,7 @@
 
     <owl:Class rdf:about="http://www.semanticweb.org/turism#HighRatedAttraction">
         <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/turism#Attraction"/>
+        <rdfs:label xml:lang="en">High Rated Attraction</rdfs:label>
     </owl:Class>
     
 
@@ -423,6 +451,7 @@
 
     <owl:Class rdf:about="http://www.semanticweb.org/turism#HighRatedHotel">
         <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/turism#Hotel"/>
+        <rdfs:label xml:lang="en">High Rated Hotel</rdfs:label>
     </owl:Class>
     
 
@@ -443,6 +472,7 @@
 
     <owl:Class rdf:about="http://www.semanticweb.org/turism#ItalianRestaurant">
         <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/turism#Restaurant"/>
+        <rdfs:label xml:lang="en">Italian Restaurant</rdfs:label>
     </owl:Class>
     
 
@@ -452,6 +482,7 @@
 
     <owl:Class rdf:about="http://www.semanticweb.org/turism#JapaneseRestaurant">
         <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/turism#Restaurant"/>
+        <rdfs:label xml:lang="en">Japanese Restaurant</rdfs:label>
     </owl:Class>
     
 
@@ -461,6 +492,7 @@
 
     <owl:Class rdf:about="http://www.semanticweb.org/turism#LuxuryHotel">
         <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/turism#Hotel"/>
+        <rdfs:label xml:lang="en">Luxury Hotel</rdfs:label>
     </owl:Class>
     
 
@@ -470,6 +502,7 @@
 
     <owl:Class rdf:about="http://www.semanticweb.org/turism#MediterranianRestaurant">
         <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/turism#Restaurant"/>
+        <rdfs:label xml:lang="en">Mediterraian Restaurant</rdfs:label>
     </owl:Class>
     
 
@@ -479,6 +512,7 @@
 
     <owl:Class rdf:about="http://www.semanticweb.org/turism#Metro">
         <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/turism#Transport"/>
+        <rdfs:label xml:lang="en">Metro</rdfs:label>
     </owl:Class>
     
 
@@ -488,6 +522,8 @@
 
     <owl:Class rdf:about="http://www.semanticweb.org/turism#MexicanRestaurant">
         <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/turism#Restaurant"/>
+        <rdfs:comment xml:lang="en">Restaurant of mexican food</rdfs:comment>
+        <rdfs:label xml:lang="en">MexicanRestaurant</rdfs:label>
     </owl:Class>
     
 
@@ -497,6 +533,7 @@
 
     <owl:Class rdf:about="http://www.semanticweb.org/turism#Monument">
         <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/turism#Attraction"/>
+        <rdfs:label xml:lang="en">Monument</rdfs:label>
     </owl:Class>
     
 
@@ -506,9 +543,9 @@
 
     <owl:Class rdf:about="http://www.semanticweb.org/turism#Museum">
         <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/turism#Attraction"/>
-        <rdfs:comment>Museum</rdfs:comment>
-        <rdfs:label>Museum</rdfs:label>
-        <rdfs:seeAlso>http://dbpedia.org/ontology/Museum</rdfs:seeAlso>
+        <rdfs:comment xml:lang="en">Building of historical objects</rdfs:comment>
+        <rdfs:label xml:lang="en">Museum</rdfs:label>
+        <rdfs:seeAlso xml:lang="en">http://dbpedia.org/ontology/Museum</rdfs:seeAlso>
     </owl:Class>
     
 
@@ -518,6 +555,7 @@
 
     <owl:Class rdf:about="http://www.semanticweb.org/turism#MusicEvent">
         <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/turism#Event"/>
+        <rdfs:label xml:lang="en">Music Event</rdfs:label>
     </owl:Class>
     
 
@@ -527,6 +565,7 @@
 
     <owl:Class rdf:about="http://www.semanticweb.org/turism#Park">
         <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/turism#Attraction"/>
+        <rdfs:label xml:lang="en">Park</rdfs:label>
     </owl:Class>
     
 
@@ -558,6 +597,7 @@
 
     <owl:Class rdf:about="http://www.semanticweb.org/turism#PublicBike">
         <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/turism#Transport"/>
+        <rdfs:label xml:lang="en">Public bike</rdfs:label>
     </owl:Class>
     
 
@@ -578,6 +618,7 @@
 
     <owl:Class rdf:about="http://www.semanticweb.org/turism#SportsEvent">
         <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/turism#Event"/>
+        <rdfs:label xml:lang="en">Sports Event</rdfs:label>
     </owl:Class>
     
 
@@ -587,6 +628,7 @@
 
     <owl:Class rdf:about="http://www.semanticweb.org/turism#Taxi">
         <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/turism#Transport"/>
+        <rdfs:label xml:lang="en">Taxi</rdfs:label>
     </owl:Class>
     
 
@@ -596,6 +638,7 @@
 
     <owl:Class rdf:about="http://www.semanticweb.org/turism#TechEvent">
         <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/turism#Event"/>
+        <rdfs:label xml:lang="en">Tech Event</rdfs:label>
     </owl:Class>
     
 
@@ -605,6 +648,7 @@
 
     <owl:Class rdf:about="http://www.semanticweb.org/turism#TouristHotel">
         <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/turism#Hotel"/>
+        <rdfs:label xml:lang="en">Tourist Hotel</rdfs:label>
     </owl:Class>
     
 
@@ -614,6 +658,7 @@
 
     <owl:Class rdf:about="http://www.semanticweb.org/turism#Tram">
         <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/turism#Transport"/>
+        <rdfs:label xml:lang="en">Tram</rdfs:label>
     </owl:Class>
     
 
@@ -638,17 +683,6 @@
      -->
 
 
-    
-
-
-    <!-- http://www.semanticweb.org/turism#AutobusZaragoza -->
-
-
-    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/turism#AutobusZaragoza">
-        <rdf:type rdf:resource="http://www.semanticweb.org/turism#Bus"/>
-        <locatedInCity rdf:resource="http://www.semanticweb.org/turism#Zaragoza"/>
-        <hasAveragePrice rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">5.79</hasAveragePrice>
-    </owl:NamedIndividual>
     
 
 
@@ -733,92 +767,39 @@
     <!-- 
     ///////////////////////////////////////////////////////////////////////////////////////
     //
+    // General axioms
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointClasses"/>
+        <owl:members rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://www.semanticweb.org/turism#Attraction"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/turism#Event"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/turism#Hotel"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/turism#Restaurant"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/turism#Transport"/>
+        </owl:members>
+    </rdf:Description>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
     // Rules
     //
     ///////////////////////////////////////////////////////////////////////////////////////
      -->
 
 
-    <rdf:Description rdf:about="http://www.semanticweb.org/turism#a">
-        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Variable"/>
-    </rdf:Description>
-    <rdf:Description rdf:about="http://www.semanticweb.org/turism#r">
-        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Variable"/>
-    </rdf:Description>
     <rdf:Description rdf:about="http://www.semanticweb.org/turism#e">
         <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Variable"/>
     </rdf:Description>
     <rdf:Description rdf:about="http://www.semanticweb.org/turism#c">
         <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Variable"/>
-    </rdf:Description>
-    <rdf:Description>
-        <swrla:isRuleEnabled rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</swrla:isRuleEnabled>
-        <rdfs:comment>Most Rated Attraction</rdfs:comment>
-        <rdfs:label>S1</rdfs:label>
-        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Imp"/>
-        <swrl:body>
-            <rdf:Description>
-                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
-                <rdf:first>
-                    <rdf:Description>
-                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#ClassAtom"/>
-                        <swrl:classPredicate rdf:resource="http://www.semanticweb.org/turism#Attraction"/>
-                        <swrl:argument1 rdf:resource="http://www.semanticweb.org/turism#a"/>
-                    </rdf:Description>
-                </rdf:first>
-                <rdf:rest>
-                    <rdf:Description>
-                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
-                        <rdf:first>
-                            <rdf:Description>
-                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#DatavaluedPropertyAtom"/>
-                                <swrl:propertyPredicate rdf:resource="http://www.semanticweb.org/turism#hasRating"/>
-                                <swrl:argument1 rdf:resource="http://www.semanticweb.org/turism#a"/>
-                                <swrl:argument2 rdf:resource="http://www.semanticweb.org/turism#r"/>
-                            </rdf:Description>
-                        </rdf:first>
-                        <rdf:rest>
-                            <rdf:Description>
-                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
-                                <rdf:first>
-                                    <rdf:Description>
-                                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#BuiltinAtom"/>
-                                        <swrl:builtin rdf:resource="http://www.w3.org/2003/11/swrlb#greaterThanOrEqual"/>
-                                        <swrl:arguments>
-                                            <rdf:Description>
-                                                <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
-                                                <rdf:first rdf:resource="http://www.semanticweb.org/turism#r"/>
-                                                <rdf:rest>
-                                                    <rdf:Description>
-                                                        <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
-                                                        <rdf:first rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">4.8</rdf:first>
-                                                        <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
-                                                    </rdf:Description>
-                                                </rdf:rest>
-                                            </rdf:Description>
-                                        </swrl:arguments>
-                                    </rdf:Description>
-                                </rdf:first>
-                                <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
-                            </rdf:Description>
-                        </rdf:rest>
-                    </rdf:Description>
-                </rdf:rest>
-            </rdf:Description>
-        </swrl:body>
-        <swrl:head>
-            <rdf:Description>
-                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
-                <rdf:first>
-                    <rdf:Description>
-                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#ClassAtom"/>
-                        <swrl:classPredicate rdf:resource="http://www.semanticweb.org/turism#HighRatedAttraction"/>
-                        <swrl:argument1 rdf:resource="http://www.semanticweb.org/turism#a"/>
-                    </rdf:Description>
-                </rdf:first>
-                <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
-            </rdf:Description>
-        </swrl:head>
     </rdf:Description>
     <rdf:Description>
         <swrla:isRuleEnabled rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</swrla:isRuleEnabled>

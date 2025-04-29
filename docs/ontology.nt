@@ -22,7 +22,6 @@
 # 
 # http://www.semanticweb.org/turism#hasAttraction
 <http://www.semanticweb.org/turism#hasAttraction> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
-<http://www.semanticweb.org/turism#hasAttraction> <http://www.w3.org/2002/07/owl#inverseOf> <http://www.semanticweb.org/turism#locatedInCity> .
 <http://www.semanticweb.org/turism#hasAttraction> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.semanticweb.org/turism#City> .
 <http://www.semanticweb.org/turism#hasAttraction> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.semanticweb.org/turism#Attraction> .
 <http://www.semanticweb.org/turism#hasAttraction> <http://www.w3.org/2000/01/rdf-schema#comment> "Inverse of locatedInCity for Attractions" .
@@ -30,7 +29,6 @@
 # 
 # http://www.semanticweb.org/turism#hasEvent
 <http://www.semanticweb.org/turism#hasEvent> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
-<http://www.semanticweb.org/turism#hasEvent> <http://www.w3.org/2002/07/owl#inverseOf> <http://www.semanticweb.org/turism#locatedInCity> .
 <http://www.semanticweb.org/turism#hasEvent> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.semanticweb.org/turism#City> .
 <http://www.semanticweb.org/turism#hasEvent> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.semanticweb.org/turism#Event> .
 <http://www.semanticweb.org/turism#hasEvent> <http://www.w3.org/2000/01/rdf-schema#comment> "Inverse of locatedInCity for events" .
@@ -38,7 +36,6 @@
 # 
 # http://www.semanticweb.org/turism#hasHotel
 <http://www.semanticweb.org/turism#hasHotel> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
-<http://www.semanticweb.org/turism#hasHotel> <http://www.w3.org/2002/07/owl#inverseOf> <http://www.semanticweb.org/turism#locatedInCity> .
 <http://www.semanticweb.org/turism#hasHotel> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.semanticweb.org/turism#City> .
 <http://www.semanticweb.org/turism#hasHotel> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.semanticweb.org/turism#Hotel> .
 <http://www.semanticweb.org/turism#hasHotel> <http://www.w3.org/2000/01/rdf-schema#comment> "Inverse of locatedInCity for hotels" .
@@ -46,7 +43,6 @@
 # 
 # http://www.semanticweb.org/turism#hasRestaurants
 <http://www.semanticweb.org/turism#hasRestaurants> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
-<http://www.semanticweb.org/turism#hasRestaurants> <http://www.w3.org/2002/07/owl#inverseOf> <http://www.semanticweb.org/turism#locatedInCity> .
 <http://www.semanticweb.org/turism#hasRestaurants> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.semanticweb.org/turism#City> .
 <http://www.semanticweb.org/turism#hasRestaurants> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.semanticweb.org/turism#Restaurant> .
 <http://www.semanticweb.org/turism#hasRestaurants> <http://www.w3.org/2000/01/rdf-schema#comment> "Inverse of locatedInCity for Restaurants" .
@@ -54,7 +50,6 @@
 # 
 # http://www.semanticweb.org/turism#hasTransport
 <http://www.semanticweb.org/turism#hasTransport> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
-<http://www.semanticweb.org/turism#hasTransport> <http://www.w3.org/2002/07/owl#inverseOf> <http://www.semanticweb.org/turism#locatedInCity> .
 <http://www.semanticweb.org/turism#hasTransport> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.semanticweb.org/turism#City> .
 <http://www.semanticweb.org/turism#hasTransport> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.semanticweb.org/turism#Transport> .
 <http://www.semanticweb.org/turism#hasTransport> <http://www.w3.org/2000/01/rdf-schema#comment> "Inverse of locatedInCity for Transport" .
@@ -62,7 +57,6 @@
 # 
 # http://www.semanticweb.org/turism#hostsEvent
 <http://www.semanticweb.org/turism#hostsEvent> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
-<http://www.semanticweb.org/turism#hostsEvent> <http://www.w3.org/2002/07/owl#inverseOf> <http://www.semanticweb.org/turism#locatedInCity> .
 <http://www.semanticweb.org/turism#hostsEvent> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.semanticweb.org/turism#City> .
 <http://www.semanticweb.org/turism#hostsEvent> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.semanticweb.org/turism#Event> .
 <http://www.semanticweb.org/turism#hostsEvent> <http://www.w3.org/2000/01/rdf-schema#label> "host event" .
@@ -93,7 +87,15 @@
 # 
 # http://www.semanticweb.org/turism#hasAveragePrice
 <http://www.semanticweb.org/turism#hasAveragePrice> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
-<http://www.semanticweb.org/turism#hasAveragePrice> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.semanticweb.org/turism#Restaurant> .
+<http://www.semanticweb.org/turism#hasAveragePrice> <http://www.w3.org/2000/01/rdf-schema#domain> _:genid1 .
+_:genid1 <http://www.w3.org/2002/07/owl#unionOf> _:genid3 .
+_:genid3 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid2 .
+_:genid2 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
+_:genid2 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://www.semanticweb.org/turism#Transport> .
+_:genid2 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid3 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://www.semanticweb.org/turism#Restaurant> .
+_:genid3 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid1 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
 <http://www.semanticweb.org/turism#hasAveragePrice> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#decimal> .
 <http://www.semanticweb.org/turism#hasAveragePrice> <http://www.w3.org/2000/01/rdf-schema#comment> "Average meal price" .
 <http://www.semanticweb.org/turism#hasAveragePrice> <http://www.w3.org/2000/01/rdf-schema#label> "has average price" .
@@ -115,8 +117,15 @@
 # 
 # http://www.semanticweb.org/turism#hasID
 <http://www.semanticweb.org/turism#hasID> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
-<http://www.semanticweb.org/turism#hasID> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.semanticweb.org/turism#City> .
-<http://www.semanticweb.org/turism#hasID> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.semanticweb.org/turism#Place> .
+<http://www.semanticweb.org/turism#hasID> <http://www.w3.org/2000/01/rdf-schema#domain> _:genid4 .
+_:genid4 <http://www.w3.org/2002/07/owl#unionOf> _:genid6 .
+_:genid6 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid5 .
+_:genid5 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
+_:genid5 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://www.semanticweb.org/turism#Place> .
+_:genid5 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid6 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://www.semanticweb.org/turism#City> .
+_:genid6 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid4 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
 <http://www.semanticweb.org/turism#hasID> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#integer> .
 <http://www.semanticweb.org/turism#hasID> <http://www.w3.org/2000/01/rdf-schema#comment> "Unique identifier" .
 <http://www.semanticweb.org/turism#hasID> <http://www.w3.org/2000/01/rdf-schema#label> "has ID" .
@@ -125,26 +134,35 @@
 <http://www.semanticweb.org/turism#hasPricePerNight> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
 <http://www.semanticweb.org/turism#hasPricePerNight> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.semanticweb.org/turism#Hotel> .
 <http://www.semanticweb.org/turism#hasPricePerNight> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#decimal> .
-<http://www.semanticweb.org/turism#hasPricePerNight> <http://www.w3.org/2000/01/rdf-schema#comment> "Cost per night" .
-<http://www.semanticweb.org/turism#hasPricePerNight> <http://www.w3.org/2000/01/rdf-schema#label> "has price per night" .
+<http://www.semanticweb.org/turism#hasPricePerNight> <http://www.w3.org/2000/01/rdf-schema#comment> "The price charged by night"@en .
+<http://www.semanticweb.org/turism#hasPricePerNight> <http://www.w3.org/2000/01/rdf-schema#label> "has price per night"@en .
 # 
 # http://www.semanticweb.org/turism#hasRating
 <http://www.semanticweb.org/turism#hasRating> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
-<http://www.semanticweb.org/turism#hasRating> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.semanticweb.org/turism#Attraction> .
-<http://www.semanticweb.org/turism#hasRating> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.semanticweb.org/turism#Hotel> .
-<http://www.semanticweb.org/turism#hasRating> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.semanticweb.org/turism#Restaurant> .
-<http://www.semanticweb.org/turism#hasRating> <http://www.w3.org/2000/01/rdf-schema#range> _:genid1 .
-_:genid1 <http://www.w3.org/2002/07/owl#withRestrictions> _:genid4 .
-_:genid4 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid2 .
-_:genid2 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
-_:genid2 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> _:genid3 .
-_:genid3 <http://www.w3.org/2001/XMLSchema#maxInclusive> "5"^^<http://www.w3.org/2001/XMLSchema#decimal> .
-_:genid2 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
-_:genid4 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> _:genid5 .
-_:genid5 <http://www.w3.org/2001/XMLSchema#minInclusive> "0"^^<http://www.w3.org/2001/XMLSchema#decimal> .
-_:genid4 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
-_:genid1 <http://www.w3.org/2002/07/owl#onDatatype> <http://www.w3.org/2001/XMLSchema#decimal> .
-_:genid1 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2000/01/rdf-schema#Datatype> .
+<http://www.semanticweb.org/turism#hasRating> <http://www.w3.org/2000/01/rdf-schema#domain> _:genid7 .
+_:genid7 <http://www.w3.org/2002/07/owl#unionOf> _:genid10 .
+_:genid10 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid9 .
+_:genid9 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid8 .
+_:genid8 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
+_:genid8 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://www.semanticweb.org/turism#Restaurant> .
+_:genid8 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid9 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://www.semanticweb.org/turism#Hotel> .
+_:genid9 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid10 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://www.semanticweb.org/turism#Attraction> .
+_:genid10 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid7 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.semanticweb.org/turism#hasRating> <http://www.w3.org/2000/01/rdf-schema#range> _:genid11 .
+_:genid11 <http://www.w3.org/2002/07/owl#withRestrictions> _:genid14 .
+_:genid14 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid12 .
+_:genid12 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
+_:genid12 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> _:genid13 .
+_:genid13 <http://www.w3.org/2001/XMLSchema#maxInclusive> "5"^^<http://www.w3.org/2001/XMLSchema#decimal> .
+_:genid12 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid14 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> _:genid15 .
+_:genid15 <http://www.w3.org/2001/XMLSchema#minInclusive> "0"^^<http://www.w3.org/2001/XMLSchema#decimal> .
+_:genid14 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid11 <http://www.w3.org/2002/07/owl#onDatatype> <http://www.w3.org/2001/XMLSchema#decimal> .
+_:genid11 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2000/01/rdf-schema#Datatype> .
 <http://www.semanticweb.org/turism#hasRating> <http://www.w3.org/2000/01/rdf-schema#comment> "Rating from 0 to 5" .
 <http://www.semanticweb.org/turism#hasRating> <http://www.w3.org/2000/01/rdf-schema#label> "has rating" .
 # 
@@ -156,8 +174,15 @@ _:genid1 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/20
 # 
 # http://www.semanticweb.org/turism#has_name
 <http://www.semanticweb.org/turism#has_name> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
-<http://www.semanticweb.org/turism#has_name> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.semanticweb.org/turism#City> .
-<http://www.semanticweb.org/turism#has_name> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.semanticweb.org/turism#Place> .
+<http://www.semanticweb.org/turism#has_name> <http://www.w3.org/2000/01/rdf-schema#domain> _:genid16 .
+_:genid16 <http://www.w3.org/2002/07/owl#unionOf> _:genid18 .
+_:genid18 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid17 .
+_:genid17 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
+_:genid17 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://www.semanticweb.org/turism#Place> .
+_:genid17 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid18 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://www.semanticweb.org/turism#City> .
+_:genid18 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid16 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
 <http://www.semanticweb.org/turism#has_name> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
 <http://www.semanticweb.org/turism#has_name> <http://www.w3.org/2000/01/rdf-schema#comment> "The name of the entity" .
 <http://www.semanticweb.org/turism#has_name> <http://www.w3.org/2000/01/rdf-schema#label> "has name" .
@@ -174,6 +199,7 @@ _:genid1 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/20
 # http://www.semanticweb.org/turism#AndalusianRestaurant
 <http://www.semanticweb.org/turism#AndalusianRestaurant> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
 <http://www.semanticweb.org/turism#AndalusianRestaurant> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.semanticweb.org/turism#Restaurant> .
+<http://www.semanticweb.org/turism#AndalusianRestaurant> <http://www.w3.org/2000/01/rdf-schema#label> "Andalusian Restaurant"@en .
 # 
 # http://www.semanticweb.org/turism#Attraction
 <http://www.semanticweb.org/turism#Attraction> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
@@ -184,50 +210,56 @@ _:genid1 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/20
 # http://www.semanticweb.org/turism#Beach
 <http://www.semanticweb.org/turism#Beach> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
 <http://www.semanticweb.org/turism#Beach> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.semanticweb.org/turism#Attraction> .
+<http://www.semanticweb.org/turism#Beach> <http://www.w3.org/2000/01/rdf-schema#label> "Beach"@en .
 # 
 # http://www.semanticweb.org/turism#BeachHotel
 <http://www.semanticweb.org/turism#BeachHotel> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
 <http://www.semanticweb.org/turism#BeachHotel> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.semanticweb.org/turism#Hotel> .
+<http://www.semanticweb.org/turism#BeachHotel> <http://www.w3.org/2000/01/rdf-schema#label> "Beach hotel"@en .
 # 
 # http://www.semanticweb.org/turism#Bus
 <http://www.semanticweb.org/turism#Bus> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
 <http://www.semanticweb.org/turism#Bus> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.semanticweb.org/turism#Transport> .
+<http://www.semanticweb.org/turism#Bus> <http://www.w3.org/2000/01/rdf-schema#label> "Bus"@en .
 # 
 # http://www.semanticweb.org/turism#BusinessHotel
 <http://www.semanticweb.org/turism#BusinessHotel> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
 <http://www.semanticweb.org/turism#BusinessHotel> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.semanticweb.org/turism#Hotel> .
+<http://www.semanticweb.org/turism#BusinessHotel> <http://www.w3.org/2000/01/rdf-schema#label> "Business Hotel"@en .
 # 
 # http://www.semanticweb.org/turism#City
 <http://www.semanticweb.org/turism#City> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
-<http://www.semanticweb.org/turism#City> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid6 .
-_:genid6 <http://www.w3.org/2002/07/owl#onClass> <http://www.semanticweb.org/turism#Attraction> .
-_:genid6 <http://www.w3.org/2002/07/owl#qualifiedCardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
-_:genid6 <http://www.w3.org/2002/07/owl#onProperty> <http://www.semanticweb.org/turism#hasAttraction> .
-_:genid6 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
-<http://www.semanticweb.org/turism#City> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid7 .
-_:genid7 <http://www.w3.org/2002/07/owl#someValuesFrom> <http://www.w3.org/2001/XMLSchema#integer> .
-_:genid7 <http://www.w3.org/2002/07/owl#onProperty> <http://www.semanticweb.org/turism#hasID> .
-_:genid7 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
-<http://www.semanticweb.org/turism#City> <http://www.w3.org/2000/01/rdf-schema#comment> "An urban administrative division" .
-<http://www.semanticweb.org/turism#City> <http://www.w3.org/2000/01/rdf-schema#label> "City" .
-<http://www.semanticweb.org/turism#City> <http://www.w3.org/2000/01/rdf-schema#seeAlso> "http://dbpedia.org/ontology/City" .
+<http://www.semanticweb.org/turism#City> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid19 .
+_:genid19 <http://www.w3.org/2002/07/owl#onClass> <http://www.semanticweb.org/turism#Attraction> .
+_:genid19 <http://www.w3.org/2002/07/owl#qualifiedCardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
+_:genid19 <http://www.w3.org/2002/07/owl#onProperty> <http://www.semanticweb.org/turism#hasAttraction> .
+_:genid19 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+<http://www.semanticweb.org/turism#City> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid20 .
+_:genid20 <http://www.w3.org/2002/07/owl#someValuesFrom> <http://www.w3.org/2001/XMLSchema#integer> .
+_:genid20 <http://www.w3.org/2002/07/owl#onProperty> <http://www.semanticweb.org/turism#hasID> .
+_:genid20 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+<http://www.semanticweb.org/turism#City> <http://www.w3.org/2000/01/rdf-schema#comment> "An urban administrative division"@en .
+<http://www.semanticweb.org/turism#City> <http://www.w3.org/2000/01/rdf-schema#label> "City"@en .
+<http://www.semanticweb.org/turism#City> <http://www.w3.org/2000/01/rdf-schema#seeAlso> "http://dbpedia.org/ontology/City"@en .
 # 
 # http://www.semanticweb.org/turism#CulturalAttraction
 <http://www.semanticweb.org/turism#CulturalAttraction> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
 <http://www.semanticweb.org/turism#CulturalAttraction> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.semanticweb.org/turism#Attraction> .
+<http://www.semanticweb.org/turism#CulturalAttraction> <http://www.w3.org/2000/01/rdf-schema#label> "Cultural Attraction"@en .
 # 
 # http://www.semanticweb.org/turism#CulturalEvent
 <http://www.semanticweb.org/turism#CulturalEvent> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
 <http://www.semanticweb.org/turism#CulturalEvent> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.semanticweb.org/turism#Event> .
+<http://www.semanticweb.org/turism#CulturalEvent> <http://www.w3.org/2000/01/rdf-schema#label> "Cultural Event"@en .
 # 
 # http://www.semanticweb.org/turism#Event
 <http://www.semanticweb.org/turism#Event> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
 <http://www.semanticweb.org/turism#Event> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.semanticweb.org/turism#Place> .
-<http://www.semanticweb.org/turism#Event> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid8 .
-_:genid8 <http://www.w3.org/2002/07/owl#onDataRange> <http://www.w3.org/2001/XMLSchema#dateTime> .
-_:genid8 <http://www.w3.org/2002/07/owl#qualifiedCardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
-_:genid8 <http://www.w3.org/2002/07/owl#onProperty> <http://www.semanticweb.org/turism#hasDate> .
-_:genid8 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+<http://www.semanticweb.org/turism#Event> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid21 .
+_:genid21 <http://www.w3.org/2002/07/owl#onDataRange> <http://www.w3.org/2001/XMLSchema#dateTime> .
+_:genid21 <http://www.w3.org/2002/07/owl#qualifiedCardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
+_:genid21 <http://www.w3.org/2002/07/owl#onProperty> <http://www.semanticweb.org/turism#hasDate> .
+_:genid21 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
 <http://www.semanticweb.org/turism#Event> <http://www.w3.org/2000/01/rdf-schema#comment> "An event happening" .
 <http://www.semanticweb.org/turism#Event> <http://www.w3.org/2000/01/rdf-schema#label> "Event" .
 <http://www.semanticweb.org/turism#Event> <http://www.w3.org/2000/01/rdf-schema#seeAlso> "http://dbpedia.org/ontology/Event" .
@@ -235,14 +267,17 @@ _:genid8 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/20
 # http://www.semanticweb.org/turism#GastronomicEvent
 <http://www.semanticweb.org/turism#GastronomicEvent> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
 <http://www.semanticweb.org/turism#GastronomicEvent> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.semanticweb.org/turism#Event> .
+<http://www.semanticweb.org/turism#GastronomicEvent> <http://www.w3.org/2000/01/rdf-schema#label> "Gastronomic Event"@en .
 # 
 # http://www.semanticweb.org/turism#HighRatedAttraction
 <http://www.semanticweb.org/turism#HighRatedAttraction> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
 <http://www.semanticweb.org/turism#HighRatedAttraction> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.semanticweb.org/turism#Attraction> .
+<http://www.semanticweb.org/turism#HighRatedAttraction> <http://www.w3.org/2000/01/rdf-schema#label> "High Rated Attraction"@en .
 # 
 # http://www.semanticweb.org/turism#HighRatedHotel
 <http://www.semanticweb.org/turism#HighRatedHotel> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
 <http://www.semanticweb.org/turism#HighRatedHotel> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.semanticweb.org/turism#Hotel> .
+<http://www.semanticweb.org/turism#HighRatedHotel> <http://www.w3.org/2000/01/rdf-schema#label> "High Rated Hotel"@en .
 # 
 # http://www.semanticweb.org/turism#Hotel
 <http://www.semanticweb.org/turism#Hotel> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
@@ -253,62 +288,73 @@ _:genid8 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/20
 # http://www.semanticweb.org/turism#ItalianRestaurant
 <http://www.semanticweb.org/turism#ItalianRestaurant> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
 <http://www.semanticweb.org/turism#ItalianRestaurant> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.semanticweb.org/turism#Restaurant> .
+<http://www.semanticweb.org/turism#ItalianRestaurant> <http://www.w3.org/2000/01/rdf-schema#label> "Italian Restaurant"@en .
 # 
 # http://www.semanticweb.org/turism#JapaneseRestaurant
 <http://www.semanticweb.org/turism#JapaneseRestaurant> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
 <http://www.semanticweb.org/turism#JapaneseRestaurant> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.semanticweb.org/turism#Restaurant> .
+<http://www.semanticweb.org/turism#JapaneseRestaurant> <http://www.w3.org/2000/01/rdf-schema#label> "Japanese Restaurant"@en .
 # 
 # http://www.semanticweb.org/turism#LuxuryHotel
 <http://www.semanticweb.org/turism#LuxuryHotel> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
 <http://www.semanticweb.org/turism#LuxuryHotel> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.semanticweb.org/turism#Hotel> .
+<http://www.semanticweb.org/turism#LuxuryHotel> <http://www.w3.org/2000/01/rdf-schema#label> "Luxury Hotel"@en .
 # 
 # http://www.semanticweb.org/turism#MediterranianRestaurant
 <http://www.semanticweb.org/turism#MediterranianRestaurant> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
 <http://www.semanticweb.org/turism#MediterranianRestaurant> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.semanticweb.org/turism#Restaurant> .
+<http://www.semanticweb.org/turism#MediterranianRestaurant> <http://www.w3.org/2000/01/rdf-schema#label> "Mediterraian Restaurant"@en .
 # 
 # http://www.semanticweb.org/turism#Metro
 <http://www.semanticweb.org/turism#Metro> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
 <http://www.semanticweb.org/turism#Metro> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.semanticweb.org/turism#Transport> .
+<http://www.semanticweb.org/turism#Metro> <http://www.w3.org/2000/01/rdf-schema#label> "Metro"@en .
 # 
 # http://www.semanticweb.org/turism#MexicanRestaurant
 <http://www.semanticweb.org/turism#MexicanRestaurant> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
 <http://www.semanticweb.org/turism#MexicanRestaurant> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.semanticweb.org/turism#Restaurant> .
+<http://www.semanticweb.org/turism#MexicanRestaurant> <http://www.w3.org/2000/01/rdf-schema#comment> "Restaurant of mexican food"@en .
+<http://www.semanticweb.org/turism#MexicanRestaurant> <http://www.w3.org/2000/01/rdf-schema#label> "MexicanRestaurant"@en .
 # 
 # http://www.semanticweb.org/turism#Monument
 <http://www.semanticweb.org/turism#Monument> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
 <http://www.semanticweb.org/turism#Monument> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.semanticweb.org/turism#Attraction> .
+<http://www.semanticweb.org/turism#Monument> <http://www.w3.org/2000/01/rdf-schema#label> "Monument"@en .
 # 
 # http://www.semanticweb.org/turism#Museum
 <http://www.semanticweb.org/turism#Museum> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
 <http://www.semanticweb.org/turism#Museum> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.semanticweb.org/turism#Attraction> .
-<http://www.semanticweb.org/turism#Museum> <http://www.w3.org/2000/01/rdf-schema#comment> "Museum" .
-<http://www.semanticweb.org/turism#Museum> <http://www.w3.org/2000/01/rdf-schema#label> "Museum" .
-<http://www.semanticweb.org/turism#Museum> <http://www.w3.org/2000/01/rdf-schema#seeAlso> "http://dbpedia.org/ontology/Museum" .
+<http://www.semanticweb.org/turism#Museum> <http://www.w3.org/2000/01/rdf-schema#comment> "Building of historical objects"@en .
+<http://www.semanticweb.org/turism#Museum> <http://www.w3.org/2000/01/rdf-schema#label> "Museum"@en .
+<http://www.semanticweb.org/turism#Museum> <http://www.w3.org/2000/01/rdf-schema#seeAlso> "http://dbpedia.org/ontology/Museum"@en .
 # 
 # http://www.semanticweb.org/turism#MusicEvent
 <http://www.semanticweb.org/turism#MusicEvent> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
 <http://www.semanticweb.org/turism#MusicEvent> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.semanticweb.org/turism#Event> .
+<http://www.semanticweb.org/turism#MusicEvent> <http://www.w3.org/2000/01/rdf-schema#label> "Music Event"@en .
 # 
 # http://www.semanticweb.org/turism#Park
 <http://www.semanticweb.org/turism#Park> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
 <http://www.semanticweb.org/turism#Park> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.semanticweb.org/turism#Attraction> .
+<http://www.semanticweb.org/turism#Park> <http://www.w3.org/2000/01/rdf-schema#label> "Park"@en .
 # 
 # http://www.semanticweb.org/turism#Place
 <http://www.semanticweb.org/turism#Place> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
-<http://www.semanticweb.org/turism#Place> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid9 .
-_:genid9 <http://www.w3.org/2002/07/owl#onClass> <http://www.semanticweb.org/turism#City> .
-_:genid9 <http://www.w3.org/2002/07/owl#qualifiedCardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
-_:genid9 <http://www.w3.org/2002/07/owl#onProperty> <http://www.semanticweb.org/turism#locatedInCity> .
-_:genid9 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
-<http://www.semanticweb.org/turism#Place> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid10 .
-_:genid10 <http://www.w3.org/2002/07/owl#someValuesFrom> <http://www.w3.org/2001/XMLSchema#integer> .
-_:genid10 <http://www.w3.org/2002/07/owl#onProperty> <http://www.semanticweb.org/turism#hasID> .
-_:genid10 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+<http://www.semanticweb.org/turism#Place> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid22 .
+_:genid22 <http://www.w3.org/2002/07/owl#onClass> <http://www.semanticweb.org/turism#City> .
+_:genid22 <http://www.w3.org/2002/07/owl#qualifiedCardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
+_:genid22 <http://www.w3.org/2002/07/owl#onProperty> <http://www.semanticweb.org/turism#locatedInCity> .
+_:genid22 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+<http://www.semanticweb.org/turism#Place> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid23 .
+_:genid23 <http://www.w3.org/2002/07/owl#someValuesFrom> <http://www.w3.org/2001/XMLSchema#integer> .
+_:genid23 <http://www.w3.org/2002/07/owl#onProperty> <http://www.semanticweb.org/turism#hasID> .
+_:genid23 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
 <http://www.semanticweb.org/turism#Place> <http://www.w3.org/2000/01/rdf-schema#label> "Place"@en .
 # 
 # http://www.semanticweb.org/turism#PublicBike
 <http://www.semanticweb.org/turism#PublicBike> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
 <http://www.semanticweb.org/turism#PublicBike> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.semanticweb.org/turism#Transport> .
+<http://www.semanticweb.org/turism#PublicBike> <http://www.w3.org/2000/01/rdf-schema#label> "Public bike"@en .
 # 
 # http://www.semanticweb.org/turism#Restaurant
 <http://www.semanticweb.org/turism#Restaurant> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
@@ -319,22 +365,27 @@ _:genid10 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2
 # http://www.semanticweb.org/turism#SportsEvent
 <http://www.semanticweb.org/turism#SportsEvent> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
 <http://www.semanticweb.org/turism#SportsEvent> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.semanticweb.org/turism#Event> .
+<http://www.semanticweb.org/turism#SportsEvent> <http://www.w3.org/2000/01/rdf-schema#label> "Sports Event"@en .
 # 
 # http://www.semanticweb.org/turism#Taxi
 <http://www.semanticweb.org/turism#Taxi> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
 <http://www.semanticweb.org/turism#Taxi> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.semanticweb.org/turism#Transport> .
+<http://www.semanticweb.org/turism#Taxi> <http://www.w3.org/2000/01/rdf-schema#label> "Taxi"@en .
 # 
 # http://www.semanticweb.org/turism#TechEvent
 <http://www.semanticweb.org/turism#TechEvent> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
 <http://www.semanticweb.org/turism#TechEvent> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.semanticweb.org/turism#Event> .
+<http://www.semanticweb.org/turism#TechEvent> <http://www.w3.org/2000/01/rdf-schema#label> "Tech Event"@en .
 # 
 # http://www.semanticweb.org/turism#TouristHotel
 <http://www.semanticweb.org/turism#TouristHotel> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
 <http://www.semanticweb.org/turism#TouristHotel> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.semanticweb.org/turism#Hotel> .
+<http://www.semanticweb.org/turism#TouristHotel> <http://www.w3.org/2000/01/rdf-schema#label> "Tourist Hotel"@en .
 # 
 # http://www.semanticweb.org/turism#Tram
 <http://www.semanticweb.org/turism#Tram> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
 <http://www.semanticweb.org/turism#Tram> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.semanticweb.org/turism#Transport> .
+<http://www.semanticweb.org/turism#Tram> <http://www.w3.org/2000/01/rdf-schema#label> "Tram"@en .
 # 
 # http://www.semanticweb.org/turism#Transport
 <http://www.semanticweb.org/turism#Transport> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
@@ -350,12 +401,6 @@ _:genid10 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2
 # #
 # #################################################################
 # 
-# 
-# http://www.semanticweb.org/turism#AutobusZaragoza
-<http://www.semanticweb.org/turism#AutobusZaragoza> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
-<http://www.semanticweb.org/turism#AutobusZaragoza> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.semanticweb.org/turism#Bus> .
-<http://www.semanticweb.org/turism#AutobusZaragoza> <http://www.semanticweb.org/turism#locatedInCity> <http://www.semanticweb.org/turism#Zaragoza> .
-<http://www.semanticweb.org/turism#AutobusZaragoza> <http://www.semanticweb.org/turism#hasAveragePrice> "5.79"^^<http://www.w3.org/2001/XMLSchema#decimal> .
 # 
 # http://www.semanticweb.org/turism#FestivalZaragoza
 <http://www.semanticweb.org/turism#FestivalZaragoza> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
@@ -414,77 +459,64 @@ _:genid10 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2
 # 
 # #################################################################
 # #
+# #    General axioms
+# #
+# #################################################################
+# 
+# 
+_:genid24 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AllDisjointClasses> .
+_:genid24 <http://www.w3.org/2002/07/owl#members> _:genid29 .
+_:genid29 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid28 .
+_:genid28 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid27 .
+_:genid27 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid26 .
+_:genid26 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid25 .
+_:genid25 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
+_:genid25 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://www.semanticweb.org/turism#Transport> .
+_:genid25 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid26 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://www.semanticweb.org/turism#Restaurant> .
+_:genid26 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid27 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://www.semanticweb.org/turism#Hotel> .
+_:genid27 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid28 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://www.semanticweb.org/turism#Event> .
+_:genid28 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid29 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://www.semanticweb.org/turism#Attraction> .
+_:genid29 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+# 
+# 
+# 
+# #################################################################
+# #
 # #    Rules
 # #
 # #################################################################
 # 
 # 
-<http://www.semanticweb.org/turism#a> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2003/11/swrl#Variable> .
-<http://www.semanticweb.org/turism#r> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2003/11/swrl#Variable> .
 <http://www.semanticweb.org/turism#e> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2003/11/swrl#Variable> .
 <http://www.semanticweb.org/turism#c> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2003/11/swrl#Variable> .
-_:genid11 <http://swrl.stanford.edu/ontologies/3.3/swrla.owl#isRuleEnabled> "true"^^<http://www.w3.org/2001/XMLSchema#boolean> .
-_:genid11 <http://www.w3.org/2000/01/rdf-schema#comment> "Most Rated Attraction" .
-_:genid11 <http://www.w3.org/2000/01/rdf-schema#label> "S1" .
-_:genid11 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2003/11/swrl#Imp> .
-_:genid11 <http://www.w3.org/2003/11/swrl#body> _:genid18 .
-_:genid18 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid16 .
-_:genid16 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid12 .
-_:genid12 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
-_:genid12 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> _:genid13 .
-_:genid13 <http://www.w3.org/2003/11/swrl#arguments> _:genid15 .
-_:genid15 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid14 .
-_:genid14 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
-_:genid14 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> "4.8"^^<http://www.w3.org/2001/XMLSchema#decimal> .
-_:genid14 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
-_:genid15 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://www.semanticweb.org/turism#r> .
-_:genid15 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
-_:genid13 <http://www.w3.org/2003/11/swrl#builtin> <http://www.w3.org/2003/11/swrlb#greaterThanOrEqual> .
-<http://www.w3.org/2003/11/swrlb#greaterThanOrEqual> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2003/11/swrl#Builtin> .
-_:genid13 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2003/11/swrl#BuiltinAtom> .
-_:genid12 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2003/11/swrl#AtomList> .
-_:genid16 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> _:genid17 .
-_:genid17 <http://www.w3.org/2003/11/swrl#argument2> <http://www.semanticweb.org/turism#r> .
-_:genid17 <http://www.w3.org/2003/11/swrl#argument1> <http://www.semanticweb.org/turism#a> .
-_:genid17 <http://www.w3.org/2003/11/swrl#propertyPredicate> <http://www.semanticweb.org/turism#hasRating> .
-_:genid17 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2003/11/swrl#DatavaluedPropertyAtom> .
-_:genid16 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2003/11/swrl#AtomList> .
-_:genid18 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> _:genid19 .
-_:genid19 <http://www.w3.org/2003/11/swrl#argument1> <http://www.semanticweb.org/turism#a> .
-_:genid19 <http://www.w3.org/2003/11/swrl#classPredicate> <http://www.semanticweb.org/turism#Attraction> .
-_:genid19 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2003/11/swrl#ClassAtom> .
-_:genid18 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2003/11/swrl#AtomList> .
-_:genid11 <http://www.w3.org/2003/11/swrl#head> _:genid20 .
-_:genid20 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
-_:genid20 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> _:genid21 .
-_:genid21 <http://www.w3.org/2003/11/swrl#argument1> <http://www.semanticweb.org/turism#a> .
-_:genid21 <http://www.w3.org/2003/11/swrl#classPredicate> <http://www.semanticweb.org/turism#HighRatedAttraction> .
-_:genid21 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2003/11/swrl#ClassAtom> .
-_:genid20 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2003/11/swrl#AtomList> .
-_:genid22 <http://swrl.stanford.edu/ontologies/3.3/swrla.owl#isRuleEnabled> "true"^^<http://www.w3.org/2001/XMLSchema#boolean> .
-_:genid22 <http://www.w3.org/2000/01/rdf-schema#comment> "Eventos alojados" .
-_:genid22 <http://www.w3.org/2000/01/rdf-schema#label> "S3" .
-_:genid22 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2003/11/swrl#Imp> .
-_:genid22 <http://www.w3.org/2003/11/swrl#body> _:genid25 .
-_:genid25 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid23 .
-_:genid23 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
-_:genid23 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> _:genid24 .
-_:genid24 <http://www.w3.org/2003/11/swrl#argument2> <http://www.semanticweb.org/turism#c> .
-_:genid24 <http://www.w3.org/2003/11/swrl#argument1> <http://www.semanticweb.org/turism#e> .
-_:genid24 <http://www.w3.org/2003/11/swrl#propertyPredicate> <http://www.semanticweb.org/turism#locatedInCity> .
-_:genid24 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2003/11/swrl#IndividualPropertyAtom> .
-_:genid23 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2003/11/swrl#AtomList> .
-_:genid25 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> _:genid26 .
-_:genid26 <http://www.w3.org/2003/11/swrl#argument1> <http://www.semanticweb.org/turism#e> .
-_:genid26 <http://www.w3.org/2003/11/swrl#classPredicate> <http://www.semanticweb.org/turism#Event> .
-_:genid26 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2003/11/swrl#ClassAtom> .
-_:genid25 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2003/11/swrl#AtomList> .
-_:genid22 <http://www.w3.org/2003/11/swrl#head> _:genid27 .
-_:genid27 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
-_:genid27 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> _:genid28 .
-_:genid28 <http://www.w3.org/2003/11/swrl#argument2> <http://www.semanticweb.org/turism#e> .
-_:genid28 <http://www.w3.org/2003/11/swrl#argument1> <http://www.semanticweb.org/turism#c> .
-_:genid28 <http://www.w3.org/2003/11/swrl#propertyPredicate> <http://www.semanticweb.org/turism#hostsEvent> .
-_:genid28 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2003/11/swrl#IndividualPropertyAtom> .
-_:genid27 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2003/11/swrl#AtomList> .
+_:genid30 <http://swrl.stanford.edu/ontologies/3.3/swrla.owl#isRuleEnabled> "true"^^<http://www.w3.org/2001/XMLSchema#boolean> .
+_:genid30 <http://www.w3.org/2000/01/rdf-schema#comment> "Eventos alojados" .
+_:genid30 <http://www.w3.org/2000/01/rdf-schema#label> "S3" .
+_:genid30 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2003/11/swrl#Imp> .
+_:genid30 <http://www.w3.org/2003/11/swrl#body> _:genid33 .
+_:genid33 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid31 .
+_:genid31 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
+_:genid31 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> _:genid32 .
+_:genid32 <http://www.w3.org/2003/11/swrl#argument2> <http://www.semanticweb.org/turism#c> .
+_:genid32 <http://www.w3.org/2003/11/swrl#argument1> <http://www.semanticweb.org/turism#e> .
+_:genid32 <http://www.w3.org/2003/11/swrl#propertyPredicate> <http://www.semanticweb.org/turism#locatedInCity> .
+_:genid32 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2003/11/swrl#IndividualPropertyAtom> .
+_:genid31 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2003/11/swrl#AtomList> .
+_:genid33 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> _:genid34 .
+_:genid34 <http://www.w3.org/2003/11/swrl#argument1> <http://www.semanticweb.org/turism#e> .
+_:genid34 <http://www.w3.org/2003/11/swrl#classPredicate> <http://www.semanticweb.org/turism#Event> .
+_:genid34 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2003/11/swrl#ClassAtom> .
+_:genid33 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2003/11/swrl#AtomList> .
+_:genid30 <http://www.w3.org/2003/11/swrl#head> _:genid35 .
+_:genid35 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
+_:genid35 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> _:genid36 .
+_:genid36 <http://www.w3.org/2003/11/swrl#argument2> <http://www.semanticweb.org/turism#e> .
+_:genid36 <http://www.w3.org/2003/11/swrl#argument1> <http://www.semanticweb.org/turism#c> .
+_:genid36 <http://www.w3.org/2003/11/swrl#propertyPredicate> <http://www.semanticweb.org/turism#hostsEvent> .
+_:genid36 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2003/11/swrl#IndividualPropertyAtom> .
+_:genid35 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2003/11/swrl#AtomList> .
 # Generated by the OWL API (version 5.1.18) https://github.com/owlcs/owlapi/
