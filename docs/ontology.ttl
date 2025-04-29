@@ -1,0 +1,528 @@
+@prefix : <http://www.semanticweb.org/turism#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@base <http://www.semanticweb.org/turism#> .
+
+<http://www.semanticweb.org/turism> rdf:type owl:Ontology .
+
+#################################################################
+#    Annotation properties
+#################################################################
+
+###  http://swrl.stanford.edu/ontologies/3.3/swrla.owl#isRuleEnabled
+<http://swrl.stanford.edu/ontologies/3.3/swrla.owl#isRuleEnabled> rdf:type owl:AnnotationProperty .
+
+
+#################################################################
+#    Object Properties
+#################################################################
+
+###  http://www.semanticweb.org/turism#hasAttraction
+:hasAttraction rdf:type owl:ObjectProperty ;
+               owl:inverseOf :locatedInCity ;
+               rdfs:domain :City ;
+               rdfs:range :Attraction ;
+               rdfs:comment "Inverse of locatedInCity for Attractions" ;
+               rdfs:label "has attraction" .
+
+
+###  http://www.semanticweb.org/turism#hasEvent
+:hasEvent rdf:type owl:ObjectProperty ;
+          owl:inverseOf :locatedInCity ;
+          rdfs:domain :City ;
+          rdfs:range :Event ;
+          rdfs:comment "Inverse of locatedInCity for events" ;
+          rdfs:label "has event" .
+
+
+###  http://www.semanticweb.org/turism#hasHotel
+:hasHotel rdf:type owl:ObjectProperty ;
+          owl:inverseOf :locatedInCity ;
+          rdfs:domain :City ;
+          rdfs:range :Hotel ;
+          rdfs:comment "Inverse of locatedInCity for hotels" ;
+          rdfs:label "has hotel" .
+
+
+###  http://www.semanticweb.org/turism#hasRestaurants
+:hasRestaurants rdf:type owl:ObjectProperty ;
+                owl:inverseOf :locatedInCity ;
+                rdfs:domain :City ;
+                rdfs:range :Restaurant ;
+                rdfs:comment "Inverse of locatedInCity for Restaurants" ;
+                rdfs:label "has restaurant" .
+
+
+###  http://www.semanticweb.org/turism#hasTransport
+:hasTransport rdf:type owl:ObjectProperty ;
+              owl:inverseOf :locatedInCity ;
+              rdfs:domain :City ;
+              rdfs:range :Transport ;
+              rdfs:comment "Inverse of locatedInCity for Transport" ;
+              rdfs:label "has transport" .
+
+
+###  http://www.semanticweb.org/turism#hostsEvent
+:hostsEvent rdf:type owl:ObjectProperty ;
+            owl:inverseOf :locatedInCity ;
+            rdfs:domain :City ;
+            rdfs:range :Event ;
+            rdfs:label "host event" .
+
+
+###  http://www.semanticweb.org/turism#locatedInCity
+:locatedInCity rdf:type owl:ObjectProperty ,
+                        owl:FunctionalProperty ;
+               rdfs:domain :Place ;
+               rdfs:range :City ;
+               rdfs:comment "Links any Attraction, Event, Hotel, Restaurant or Transport to its City." ;
+               rdfs:label "located in city" .
+
+
+#################################################################
+#    Data properties
+#################################################################
+
+###  http://www.semanticweb.org/turism#hasAverageCost
+:hasAverageCost rdf:type owl:DatatypeProperty ;
+                rdfs:domain :Transport ;
+                rdfs:range xsd:decimal ;
+                rdfs:comment "Average cost of the transport" ;
+                rdfs:label "has average cost" .
+
+
+###  http://www.semanticweb.org/turism#hasAveragePrice
+:hasAveragePrice rdf:type owl:DatatypeProperty ;
+                 rdfs:domain :Restaurant ;
+                 rdfs:range xsd:decimal ;
+                 rdfs:comment "Average meal price" ;
+                 rdfs:label "has average price" .
+
+
+###  http://www.semanticweb.org/turism#hasCoordenades
+:hasCoordenades rdf:type owl:DatatypeProperty ;
+                rdfs:domain :City ;
+                rdfs:range xsd:string ;
+                rdfs:comment "Coordinates of a city" ;
+                rdfs:label "has coordinates" .
+
+
+###  http://www.semanticweb.org/turism#hasDate
+:hasDate rdf:type owl:DatatypeProperty ,
+                  owl:FunctionalProperty ;
+         rdfs:domain :Event ;
+         rdfs:range xsd:dateTime ;
+         rdfs:comment "Date of the event" ;
+         rdfs:label "has date" .
+
+
+###  http://www.semanticweb.org/turism#hasID
+:hasID rdf:type owl:DatatypeProperty ;
+       rdfs:domain :City ,
+                   :Place ;
+       rdfs:range xsd:integer ;
+       rdfs:comment "Unique identifier" ;
+       rdfs:label "has ID" .
+
+
+###  http://www.semanticweb.org/turism#hasPricePerNight
+:hasPricePerNight rdf:type owl:DatatypeProperty ;
+                  rdfs:domain :Hotel ;
+                  rdfs:range xsd:decimal ;
+                  rdfs:comment "Cost per night" ;
+                  rdfs:label "has price per night" .
+
+
+###  http://www.semanticweb.org/turism#hasRating
+:hasRating rdf:type owl:DatatypeProperty ;
+           rdfs:domain :Attraction ,
+                       :Hotel ,
+                       :Restaurant ;
+           rdfs:range [ rdf:type rdfs:Datatype ;
+                        owl:onDatatype xsd:decimal ;
+                        owl:withRestrictions ( [ xsd:minInclusive 0
+                                               ]
+                                               [ xsd:maxInclusive 5
+                                               ]
+                                             )
+                      ] ;
+           rdfs:comment "Rating from 0 to 5" ;
+           rdfs:label "has rating" .
+
+
+###  http://www.semanticweb.org/turism#hasStars
+:hasStars rdf:type owl:DatatypeProperty ;
+          rdfs:domain :Hotel ;
+          rdfs:range xsd:decimal ;
+          rdfs:label "has stars" .
+
+
+###  http://www.semanticweb.org/turism#has_name
+:has_name rdf:type owl:DatatypeProperty ;
+          rdfs:domain :City ,
+                      :Place ;
+          rdfs:range xsd:string ;
+          rdfs:comment "The name of the entity" ;
+          rdfs:label "has name" .
+
+
+#################################################################
+#    Classes
+#################################################################
+
+###  http://www.semanticweb.org/turism#AndalusianRestaurant
+:AndalusianRestaurant rdf:type owl:Class ;
+                      rdfs:subClassOf :Restaurant .
+
+
+###  http://www.semanticweb.org/turism#Attraction
+:Attraction rdf:type owl:Class ;
+            rdfs:subClassOf :Place ;
+            rdfs:comment "A tourist attraction."@en ;
+            rdfs:label "Attraction"@en .
+
+
+###  http://www.semanticweb.org/turism#Beach
+:Beach rdf:type owl:Class ;
+       rdfs:subClassOf :Attraction .
+
+
+###  http://www.semanticweb.org/turism#BeachHotel
+:BeachHotel rdf:type owl:Class ;
+            rdfs:subClassOf :Hotel .
+
+
+###  http://www.semanticweb.org/turism#Bus
+:Bus rdf:type owl:Class ;
+     rdfs:subClassOf :Transport .
+
+
+###  http://www.semanticweb.org/turism#BusinessHotel
+:BusinessHotel rdf:type owl:Class ;
+               rdfs:subClassOf :Hotel .
+
+
+###  http://www.semanticweb.org/turism#City
+:City rdf:type owl:Class ;
+      rdfs:subClassOf [ rdf:type owl:Restriction ;
+                        owl:onProperty :hasAttraction ;
+                        owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                        owl:onClass :Attraction
+                      ] ,
+                      [ rdf:type owl:Restriction ;
+                        owl:onProperty :hasID ;
+                        owl:someValuesFrom xsd:integer
+                      ] ;
+      rdfs:comment "An urban administrative division" ;
+      rdfs:label "City" ;
+      rdfs:seeAlso "http://dbpedia.org/ontology/City" .
+
+
+###  http://www.semanticweb.org/turism#CulturalAttraction
+:CulturalAttraction rdf:type owl:Class ;
+                    rdfs:subClassOf :Attraction .
+
+
+###  http://www.semanticweb.org/turism#CulturalEvent
+:CulturalEvent rdf:type owl:Class ;
+               rdfs:subClassOf :Event .
+
+
+###  http://www.semanticweb.org/turism#Event
+:Event rdf:type owl:Class ;
+       rdfs:subClassOf :Place ,
+                       [ rdf:type owl:Restriction ;
+                         owl:onProperty :hasDate ;
+                         owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                         owl:onDataRange xsd:dateTime
+                       ] ;
+       rdfs:comment "An event happening" ;
+       rdfs:label "Event" ;
+       rdfs:seeAlso "http://dbpedia.org/ontology/Event" .
+
+
+###  http://www.semanticweb.org/turism#GastronomicEvent
+:GastronomicEvent rdf:type owl:Class ;
+                  rdfs:subClassOf :Event .
+
+
+###  http://www.semanticweb.org/turism#HighRatedAttraction
+:HighRatedAttraction rdf:type owl:Class ;
+                     rdfs:subClassOf :Attraction .
+
+
+###  http://www.semanticweb.org/turism#HighRatedHotel
+:HighRatedHotel rdf:type owl:Class ;
+                rdfs:subClassOf :Hotel .
+
+
+###  http://www.semanticweb.org/turism#Hotel
+:Hotel rdf:type owl:Class ;
+       rdfs:subClassOf :Place ;
+       rdfs:comment "Place to stay" ;
+       rdfs:label "Hotel" .
+
+
+###  http://www.semanticweb.org/turism#ItalianRestaurant
+:ItalianRestaurant rdf:type owl:Class ;
+                   rdfs:subClassOf :Restaurant .
+
+
+###  http://www.semanticweb.org/turism#JapaneseRestaurant
+:JapaneseRestaurant rdf:type owl:Class ;
+                    rdfs:subClassOf :Restaurant .
+
+
+###  http://www.semanticweb.org/turism#LuxuryHotel
+:LuxuryHotel rdf:type owl:Class ;
+             rdfs:subClassOf :Hotel .
+
+
+###  http://www.semanticweb.org/turism#MediterranianRestaurant
+:MediterranianRestaurant rdf:type owl:Class ;
+                         rdfs:subClassOf :Restaurant .
+
+
+###  http://www.semanticweb.org/turism#Metro
+:Metro rdf:type owl:Class ;
+       rdfs:subClassOf :Transport .
+
+
+###  http://www.semanticweb.org/turism#MexicanRestaurant
+:MexicanRestaurant rdf:type owl:Class ;
+                   rdfs:subClassOf :Restaurant .
+
+
+###  http://www.semanticweb.org/turism#Monument
+:Monument rdf:type owl:Class ;
+          rdfs:subClassOf :Attraction .
+
+
+###  http://www.semanticweb.org/turism#Museum
+:Museum rdf:type owl:Class ;
+        rdfs:subClassOf :Attraction ;
+        rdfs:comment "Museum" ;
+        rdfs:label "Museum" ;
+        rdfs:seeAlso "http://dbpedia.org/ontology/Museum" .
+
+
+###  http://www.semanticweb.org/turism#MusicEvent
+:MusicEvent rdf:type owl:Class ;
+            rdfs:subClassOf :Event .
+
+
+###  http://www.semanticweb.org/turism#Park
+:Park rdf:type owl:Class ;
+      rdfs:subClassOf :Attraction .
+
+
+###  http://www.semanticweb.org/turism#Place
+:Place rdf:type owl:Class ;
+       rdfs:subClassOf [ rdf:type owl:Restriction ;
+                         owl:onProperty :locatedInCity ;
+                         owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                         owl:onClass :City
+                       ] ,
+                       [ rdf:type owl:Restriction ;
+                         owl:onProperty :hasID ;
+                         owl:someValuesFrom xsd:integer
+                       ] ;
+       rdfs:label "Place"@en .
+
+
+###  http://www.semanticweb.org/turism#PublicBike
+:PublicBike rdf:type owl:Class ;
+            rdfs:subClassOf :Transport .
+
+
+###  http://www.semanticweb.org/turism#Restaurant
+:Restaurant rdf:type owl:Class ;
+            rdfs:subClassOf :Place ;
+            rdfs:comment "Place to eat" ;
+            rdfs:label "Restaurant" .
+
+
+###  http://www.semanticweb.org/turism#SportsEvent
+:SportsEvent rdf:type owl:Class ;
+             rdfs:subClassOf :Event .
+
+
+###  http://www.semanticweb.org/turism#Taxi
+:Taxi rdf:type owl:Class ;
+      rdfs:subClassOf :Transport .
+
+
+###  http://www.semanticweb.org/turism#TechEvent
+:TechEvent rdf:type owl:Class ;
+           rdfs:subClassOf :Event .
+
+
+###  http://www.semanticweb.org/turism#TouristHotel
+:TouristHotel rdf:type owl:Class ;
+              rdfs:subClassOf :Hotel .
+
+
+###  http://www.semanticweb.org/turism#Tram
+:Tram rdf:type owl:Class ;
+      rdfs:subClassOf :Transport .
+
+
+###  http://www.semanticweb.org/turism#Transport
+:Transport rdf:type owl:Class ;
+           rdfs:subClassOf :Place ;
+           rdfs:comment "to travel" ;
+           rdfs:label "Transport" .
+
+
+#################################################################
+#    Individuals
+#################################################################
+
+###  http://www.semanticweb.org/turism#AutobusZaragoza
+:AutobusZaragoza rdf:type owl:NamedIndividual ,
+                          :Bus ;
+                 :locatedInCity :Zaragoza ;
+                 :hasAveragePrice 5.79 .
+
+
+###  http://www.semanticweb.org/turism#FestivalZaragoza
+:FestivalZaragoza rdf:type owl:NamedIndividual ,
+                           :MusicEvent ;
+                  :locatedInCity :Zaragoza ;
+                  :hasDate "2024-02-22T09:00:00"^^xsd:dateTime ;
+                  :hasID 18 ;
+                  :has_name "Festival Zaragoza" ;
+                  rdfs:comment "A festival from Zaragoza"@en ;
+                  rdfs:label "Festival Zaragoza"@en .
+
+
+###  http://www.semanticweb.org/turism#Hotel_Palace_Zaragoza
+:Hotel_Palace_Zaragoza rdf:type owl:NamedIndividual ,
+                                :BusinessHotel ;
+                       :locatedInCity :Zaragoza ;
+                       :hasID 16 ;
+                       :hasPricePerNight 199 ;
+                       :hasRating 4.9 ;
+                       rdfs:comment "Hotel Palace de Zaragoza" ;
+                       rdfs:label "Hotel Palace Zaragoza" .
+
+
+###  http://www.semanticweb.org/turism#ParqueSanSebastian
+:ParqueSanSebastian rdf:type owl:NamedIndividual ,
+                             :Museum ;
+                    :locatedInCity :Zaragoza ;
+                    :hasID 1 ;
+                    :hasRating 3.7 ;
+                    :has_name "Castillo Zaragoza" ;
+                    rdfs:comment "Castillo de Zaragoza" ;
+                    rdfs:label "Castillo Zaragoza" .
+
+
+###  http://www.semanticweb.org/turism#RestauranteGourmetZaragoza
+:RestauranteGourmetZaragoza rdf:type owl:NamedIndividual ,
+                                     :AndalusianRestaurant ;
+                            :locatedInCity :Zaragoza ;
+                            :hasAveragePrice 65 ;
+                            :hasID 7 ;
+                            :hasRating 4.5 ;
+                            rdfs:comment "Restaurante Gourmet de Zaragoza" ;
+                            rdfs:label "Restaurante Gourmet Zaragoza" .
+
+
+###  http://www.semanticweb.org/turism#Zaragoza
+:Zaragoza rdf:type owl:NamedIndividual ,
+                   :City ;
+          :hasAttraction :ParqueSanSebastian ;
+          :hasEvent :FestivalZaragoza ;
+          :hasHotel :Hotel_Palace_Zaragoza ;
+          :hasRestaurants :RestauranteGourmetZaragoza ;
+          :hasCoordenades "\"41.6488,-0.8891\"" ;
+          :hasID 5 ;
+          :has_name "Zaragoza" ;
+          rdfs:comment "A custom city"@en ;
+          rdfs:label "Zaragoza"@en .
+
+
+#################################################################
+#    Rules
+#################################################################
+
+:a rdf:type <http://www.w3.org/2003/11/swrl#Variable> .
+
+:r rdf:type <http://www.w3.org/2003/11/swrl#Variable> .
+
+:e rdf:type <http://www.w3.org/2003/11/swrl#Variable> .
+
+:c rdf:type <http://www.w3.org/2003/11/swrl#Variable> .
+
+[ <http://swrl.stanford.edu/ontologies/3.3/swrla.owl#isRuleEnabled> "true"^^xsd:boolean ;
+   rdfs:comment "Most Rated Attraction" ;
+   rdfs:label "S1" ;
+   rdf:type <http://www.w3.org/2003/11/swrl#Imp> ;
+   <http://www.w3.org/2003/11/swrl#body> [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
+                                           rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#ClassAtom> ;
+                                                       <http://www.w3.org/2003/11/swrl#classPredicate> :Attraction ;
+                                                       <http://www.w3.org/2003/11/swrl#argument1> :a
+                                                     ] ;
+                                           rdf:rest [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
+                                                      rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#DatavaluedPropertyAtom> ;
+                                                                  <http://www.w3.org/2003/11/swrl#propertyPredicate> :hasRating ;
+                                                                  <http://www.w3.org/2003/11/swrl#argument1> :a ;
+                                                                  <http://www.w3.org/2003/11/swrl#argument2> :r
+                                                                ] ;
+                                                      rdf:rest [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
+                                                                 rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#BuiltinAtom> ;
+                                                                             <http://www.w3.org/2003/11/swrl#builtin> <http://www.w3.org/2003/11/swrlb#greaterThanOrEqual> ;
+                                                                             <http://www.w3.org/2003/11/swrl#arguments> [ rdf:type rdf:List ;
+                                                                                                                          rdf:first :r ;
+                                                                                                                          rdf:rest [ rdf:type rdf:List ;
+                                                                                                                                     rdf:first 4.8 ;
+                                                                                                                                     rdf:rest rdf:nil
+                                                                                                                                   ]
+                                                                                                                        ]
+                                                                           ] ;
+                                                                 rdf:rest rdf:nil
+                                                               ]
+                                                    ]
+                                         ] ;
+   <http://www.w3.org/2003/11/swrl#head> [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
+                                           rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#ClassAtom> ;
+                                                       <http://www.w3.org/2003/11/swrl#classPredicate> :HighRatedAttraction ;
+                                                       <http://www.w3.org/2003/11/swrl#argument1> :a
+                                                     ] ;
+                                           rdf:rest rdf:nil
+                                         ]
+ ] .
+
+[ <http://swrl.stanford.edu/ontologies/3.3/swrla.owl#isRuleEnabled> "true"^^xsd:boolean ;
+   rdfs:comment "Eventos alojados" ;
+   rdfs:label "S3" ;
+   rdf:type <http://www.w3.org/2003/11/swrl#Imp> ;
+   <http://www.w3.org/2003/11/swrl#body> [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
+                                           rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#ClassAtom> ;
+                                                       <http://www.w3.org/2003/11/swrl#classPredicate> :Event ;
+                                                       <http://www.w3.org/2003/11/swrl#argument1> :e
+                                                     ] ;
+                                           rdf:rest [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
+                                                      rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#IndividualPropertyAtom> ;
+                                                                  <http://www.w3.org/2003/11/swrl#propertyPredicate> :locatedInCity ;
+                                                                  <http://www.w3.org/2003/11/swrl#argument1> :e ;
+                                                                  <http://www.w3.org/2003/11/swrl#argument2> :c
+                                                                ] ;
+                                                      rdf:rest rdf:nil
+                                                    ]
+                                         ] ;
+   <http://www.w3.org/2003/11/swrl#head> [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
+                                           rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#IndividualPropertyAtom> ;
+                                                       <http://www.w3.org/2003/11/swrl#propertyPredicate> :hostsEvent ;
+                                                       <http://www.w3.org/2003/11/swrl#argument1> :c ;
+                                                       <http://www.w3.org/2003/11/swrl#argument2> :e
+                                                     ] ;
+                                           rdf:rest rdf:nil
+                                         ]
+ ] .
+
+###  Generated by the OWL API (version 5.1.18) https://github.com/owlcs/owlapi/
